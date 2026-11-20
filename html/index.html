@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>whip_roulette</title>
+<!-- whip's own typefaces and design tokens, from whip_core: the same look, and a whip theme carries over. -->
+<link rel="stylesheet" href="https://cfx-nui-whip_core/html/css/fonts.css">
+<link rel="stylesheet" href="https://cfx-nui-whip_core/html/css/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- While seated: how the table stands. The bets themselves go down on the felt. -->
+<div id="panel" class="hidden">
+    <div class="rl-head">
+        <div class="rl-eyebrow" id="label">Roulette</div>
+        <div class="rl-limits" id="limits"></div>
+    </div>
+    <div class="rl-status">
+        <div class="rl-title" id="title">Place your bets</div>
+        <div class="rl-timer hidden" id="timer"><div class="rl-timer-bar" id="timer-bar"></div></div>
+    </div>
+    <div class="rl-row">
+        <span class="rl-label">Your bets</span>
+        <span class="rl-amount" id="total">$0</span>
+    </div>
+    <div class="rl-history" id="history"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

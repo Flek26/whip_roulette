@@ -1,0 +1,58 @@
+/* whip_roulette: whip's tokens (whip_core/html/css/base.css), whip's glass panel. Written at whip's 2560 x 1440
+   design and scaled by --ui-scale, as whip's own screens are (app.js sets it the way whip's utils.js does). */
+
+html, body { margin: 0; background: transparent; overflow: hidden; user-select: none; }
+body { font-family: var(--ui-font); color: var(--ui-text); -webkit-font-smoothing: antialiased; }
+.hidden { display: none !important; }
+
+.rl-eyebrow, .rl-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ui-text-label);
+}
+
+/* ---------- The panel ---------- */
+
+#panel {
+    position: fixed;
+    right: 40px;
+    bottom: 200px;
+    width: 400px;
+    zoom: var(--ui-scale, 1);
+    padding: 22px 22px 18px;
+    border-radius: var(--ui-radius-panel);
+    background: var(--ui-surface-raised);
+    border: 1px solid var(--ui-border);
+    box-shadow: var(--ui-shadow-lg);
+}
+.rl-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid var(--ui-border); }
+.rl-limits { font-size: 14px; color: var(--ui-text-mid); font-variant-numeric: tabular-nums; }
+.rl-status { padding: 16px 0 14px; }
+.rl-title { font-family: var(--ui-font-display); font-size: 34px; font-weight: 700; line-height: 1.1; }
+.rl-title.won  { color: var(--ui-success); }
+.rl-title.lost { color: var(--ui-error); }
+.rl-title.turn { color: var(--ui-accent); }
+
+.rl-timer { margin-top: 10px; height: 5px; border-radius: 3px; background: var(--ui-surface-light); overflow: hidden; }
+.rl-timer-bar { height: 100%; width: 100%; background: var(--ui-accent); transition: width 0.25s linear; }
+.rl-timer.low .rl-timer-bar { background: var(--ui-error); }
+
+.rl-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px; margin-bottom: 6px;
+    border-radius: var(--ui-radius-row); background: var(--ui-surface-medium);
+}
+.rl-amount { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.rl-history { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.rl-num {
+    min-width: 34px; height: 34px; padding: 0 6px; box-sizing: border-box;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 17px; font-weight: 700; font-size: 15px; color: #fff;
+}
+.rl-num.red { background: #c8102e; }
+.rl-num.black { background: #1d1d1f; border: 1px solid var(--ui-border); }
+.rl-num.green { background: #138a4a; }
+.rl-num.latest { width: 44px; height: 44px; border-radius: 22px; font-size: 19px; box-shadow: 0 0 0 2px var(--ui-accent); }
